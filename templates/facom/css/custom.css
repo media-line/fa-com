@@ -1,0 +1,21 @@
+.main-wrapper {
+    padding: 5%;
+}
+
+/*Шапка*/
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right_header {
+    flex-grow: 1;
+    text-align: right;
+}
+
+/*Верхнее меню*/
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+

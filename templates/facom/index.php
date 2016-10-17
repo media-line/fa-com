@@ -36,19 +36,30 @@ defined('_JEXEC') or die;
 	<link type="text/css" rel="stylesheet" href="/templates/facom/css/custom.css" />
 </head>
 <body>
-<header>
-    <div class="logo">
-        <img src="/templates/facom/images/logo.png">
-    </div>
-    <div class="right_header">
-        <div class="change_lang"></div>
-        <div class="contacts"></div>
-    </div>
-    <nav></nav>
-</header>
-<main>
-
-</main>
-<footer><!-- на данный момент футера у сайта нет --></footer>
+<div class="main-wrapper">
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="/templates/facom/images/logo.png">
+            </a>
+        </div>
+        <div class="right_header">
+            <div class="change_lang">
+                <jdoc:include type="modules" name="change_lang" style="none" />
+            </div>
+            <div class="contacts">
+                <jdoc:include type="modules" name="contacts" style="xhtml" />
+            </div>
+            <nav>
+                <jdoc:include type="modules" name="head_menu" style="xhtml" />
+            </nav>
+        </div>
+    </header>
+    <main>
+        <jdoc:include type="component" />
+    </main>
+    <footer><!-- на данный момент футера у сайта нет --></footer>
+    <jdoc:include type="modules" name="debug" style="none" />
+</div>
 </body>
 </html>
