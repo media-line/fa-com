@@ -1,5 +1,5 @@
 .main-wrapper {
-    padding: 0 14%;
+    padding: 0 13%;
 }
 
 /*Шапка*/
@@ -19,9 +19,30 @@ header {
     text-align: right;
 }
 
+.lang-inline {
+    margin-top: 10px !important;
+}
+
+.lang-inline li:first-child {
+    padding-right: 4%;
+}
+
+.lang-inline > li > a > img {
+    opacity: 0.6;
+}
+
+.lang-inline > li > a > img:hover, li.lang-active > a > img {
+    opacity: 1;
+}
+
+.lang-inline img {
+    width: 6rem;
+}
+
 .contacts {
     font-family: "Myanmar Text";
     font-size: 20pt;
+    margin-top: 4%;
 }
 
 .contacts a {
@@ -29,13 +50,34 @@ header {
 }
 
 /*Верхнее меню*/
-.nav {
+.right_header > nav {
+    margin-top: 15%;
+}
+
+.right_header .nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     font-family: "Carlito";
     font-size: 18pt;
 }
 
-.nav a {
+.right_header .nav a {
     color: #000;
+}
+
+.nav > li > a {
+    padding: 10px 20px;
+}
+
+    .nav > li:first-child > a {
+        padding-left: 0;
+    }
+
+    .nav > li:last-child > a {
+        padding-right: 0;
+    }
+
+.nav > li > a:hover {
+    background: transparent;
+    color: #ECC9D0;
 }
