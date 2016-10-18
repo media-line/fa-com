@@ -1,11 +1,17 @@
 .main-wrapper {
-    padding: 5%;
+    padding: 0 14%;
 }
 
 /*Шапка*/
 header {
     display: flex;
     justify-content: space-between;
+    margin-top: 8%;
+    border-top: 1px solid gray;
+}
+
+.center-block {
+    width: 33%;
 }
 
 .right_header {
@@ -13,9 +19,23 @@ header {
     text-align: right;
 }
 
+.contacts {
+    font-family: "Myanmar Text";
+    font-size: 20pt;
+}
+
+.contacts a {
+    color: #000;
+}
+
 /*Верхнее меню*/
 .nav {
     display: flex;
     justify-content: space-between;
+    font-family: "Carlito";
+    font-size: 18pt;
 }
 
+.nav a {
+    color: #000;
+}

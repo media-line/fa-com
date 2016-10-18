@@ -43,6 +43,7 @@ defined('_JEXEC') or die;
                 <img src="/templates/facom/images/logo.png">
             </a>
         </div>
+        <div class="center-block"></div>
         <div class="right_header">
             <div class="change_lang">
                 <jdoc:include type="modules" name="change_lang" style="none" />
