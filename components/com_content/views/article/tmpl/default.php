@@ -46,7 +46,7 @@ JHtml::_('behavior.caption');
 	<?php if ($params->get('show_title') || $params->get('show_author')) : ?>
 	<div class="page-header">
 		<?php if ($params->get('show_title')) : ?>
-			<h2 itemprop="name">
+			<h2 itemprop="headline">
 				<?php echo $this->escape($this->item->title); ?>
 			</h2>
 		<?php endif; ?>
@@ -109,7 +109,20 @@ JHtml::_('behavior.caption');
 	<?php if (isset ($this->item->toc)) :
 		echo $this->item->toc;
 	endif; ?>
-	<div itemprop="articleBody">
+		<?php
+		$app = JFactory::getApplication();
+		$menu = $app->getMenu();
+		if ($menu->getActive() == $menu->getDefault()) {
+			?>
+				<div itemprop="articleBody">
+			<?php
+		} else {
+			?>
+				<div class="articleBody" itemprop="articleBody">
+			<?php
+		}
+		?>
+
 		<?php echo $this->item->text; ?>
 	</div>
 
@@ -148,7 +161,7 @@ JHtml::_('behavior.caption');
 		<?php
 		if ($attribs->alternative_readmore == null) :
 			echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
-		elseif ($readmore = $this->item->alternative_readmore) :
+		elseif ($readmore = $attribs->alternative_readmore) :
 			echo $readmore;
 			if ($params->get('show_readmore_title', 0) != 0) :
 				echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));

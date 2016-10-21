@@ -1,13 +1,42 @@
+body {
+    position: relative;
+}
+
+body:after {
+    background: url("/templates/facom/images/bg/left-top.png") left top no-repeat,
+                url("/templates/facom/images/bg/right-top.png") right top no-repeat,
+                url("/templates/facom/images/bg/left-center.png") left center repeat-y,
+                url("/templates/facom/images/bg/right-center.png") right center repeat-y;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.3;
+}
+
 .main-wrapper {
     padding: 0 13%;
+    min-height: 100vh;
 }
 
 /*Шапка*/
 header {
     display: flex;
     justify-content: space-between;
-    margin-top: 8%;
-    border-top: 1px solid gray;
+    padding-top: 3%;
+}
+
+.logo {
+    width: 33%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.logo img {
+    width: 80%;
 }
 
 .center-block {
@@ -28,11 +57,13 @@ header {
 }
 
 .lang-inline > li > a > img {
-    opacity: 0.6;
+    opacity: 0.4;
+    transition: 1s;
 }
 
 .lang-inline > li > a > img:hover, li.lang-active > a > img {
     opacity: 1;
+    transition: 1s;
 }
 
 .lang-inline img {
@@ -41,7 +72,7 @@ header {
 
 .contacts {
     font-family: "Myanmar Text";
-    font-size: 20pt;
+    font-size: 2.6rem;
     margin-top: 4%;
 }
 
@@ -58,7 +89,7 @@ header {
     display: flex;
     justify-content: flex-end;
     font-family: "Carlito";
-    font-size: 18pt;
+    font-size: 3rem;
 }
 
 .right_header .nav a {
@@ -67,6 +98,7 @@ header {
 
 .nav > li > a {
     padding: 10px 20px;
+    transition: 1s;
 }
 
     .nav > li:first-child > a {
@@ -80,4 +112,45 @@ header {
 .nav > li > a:hover {
     background: transparent;
     color: #ECC9D0;
+    transition: 1s;
+}
+
+.articleBody {
+    min-height: 55vh;
+    border: 1px solid #DBDBDB;
+    padding: 5%;
+    text-align: left;
+}
+
+.rowImages {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.rowImages .fancyboxLoc{
+    margin: 0 !important;
+}
+
+.fancyboxLoc {
+    width: 33.333% !important;
+}
+
+.fancyboxLoc img {
+    width: 100%;
+    margin: 0;
+}
+
+.page-header {
+    margin: 40px 0 -1px;
+    border: 1px solid #DBDBDB;
+    padding: 10px;
+    font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 34px;
+    color: #262626;
+}
+
+p {
+    color: #262626;
+    margin: 16px 0;
 }

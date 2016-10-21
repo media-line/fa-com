@@ -34,13 +34,17 @@ defined('_JEXEC') or die;
 
 	<!-- Подключение собственного CSS -->
 	<link type="text/css" rel="stylesheet" href="/templates/facom/css/custom.css" />
+
+    <!-- Подключение js-библиотек -->
+        <!-- блик на логотипе -->
+        <script type="text/javascript" src="/templates/facom/js/jquery.shiningImage.min.js"></script>
 </head>
 <body>
 <div class="main-wrapper">
     <header>
         <div class="logo">
             <a href="/">
-                <img src="/templates/facom/images/logo.png">
+                <img id="logo" src="/templates/facom/images/logo.png">
             </a>
         </div>
         <div class="center-block"></div>
@@ -59,8 +63,13 @@ defined('_JEXEC') or die;
     <main>
         <jdoc:include type="component" />
     </main>
-    <footer><!-- на данный момент футера у сайта нет --></footer>
+<!--    <footer> на данный момент футера у сайта нет </footer> -->
     <jdoc:include type="modules" name="debug" style="none" />
 </div>
 </body>
 </html>
+
+<!-- блик по логотипу -->
+<script>
+    $('#logo').shiningImage();
+</script>
