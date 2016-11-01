@@ -22,6 +22,16 @@ div.mod-languages img {
 
 div.mod-languages a {
 	text-decoration: none;
+	font-size: 23px;
+    color: #000;
+    transition: 1s;
+    font-family: "Open Sans";
+}
+
+div.mod-languages a:hover {
+    text-decoration: none;
+    color: #ECC9D0;
+    transition: 1s;
 }
 
 /* Advanced Dropdown style*/

@@ -34,12 +34,12 @@ if ( !defined('UTF8') ) {
 * Also need to check we have the correct internal mbstring
 * encoding
 */
-if ( extension_loaded('mbstring')) {
+/*if ( extension_loaded('mbstring')) {
     if ( ini_get('mbstring.func_overload') & MB_OVERLOAD_STRING ) {
         trigger_error('String functions are overloaded by mbstring',E_USER_ERROR);
     }
     mb_internal_encoding('UTF-8');
-}
+}*/
 
 /**
 * Check whether PCRE has been compiled with UTF-8 support
